@@ -8,14 +8,11 @@ class puppet_master::firewall(
     Array $allow_incoming_from,
 ){
 
-    # TODO - restrict incoming traffic to networks / ip's listed in
-    #        $allow_incoming_from
-    #        Allow from anywhere by default
-
     # allow incoming on port 8140
     firewall { '8140 tcp access for puppet agent' :
         proto  => 'tcp',
         dport  => '8140',
         action => 'accept',
+        source => $allow_incoming_from,
     }
 }

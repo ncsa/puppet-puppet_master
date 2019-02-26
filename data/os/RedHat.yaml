@@ -1,0 +1,3 @@
+---
+puppet_master::install::required_packages:
+    - puppetserver

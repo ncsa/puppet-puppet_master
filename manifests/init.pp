@@ -4,15 +4,10 @@
 #
 # @example
 #   include puppet_master
-class puppet_master(
-    Boolean $include_pdk,
-){
+class puppet_master {
 
     include install
     include firewall
     include clean_cache
-
-    if $include_pdk {
-        include pdk
-    }
+    include pdk
 }
