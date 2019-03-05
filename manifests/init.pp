@@ -6,8 +6,8 @@
 #   include puppet_master
 class puppet_master {
 
-    include install
-    include firewall
-    include clean_cache
-    include pdk
+    include ::puppet_master::install
+    include ::puppet_master::firewall
+    include ::puppet_master::clean_cache
+    include ::puppet_master::pdk
 }
