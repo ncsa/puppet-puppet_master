@@ -8,6 +8,7 @@ class puppet_master {
 
     include ::puppet_master::install
     include ::puppet_master::firewall
-    include ::puppet_master::clean_cache
+    include ::puppet_master::tidy
     include ::puppet_master::pdk
+
 }
