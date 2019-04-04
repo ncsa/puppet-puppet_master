@@ -5,7 +5,7 @@ puppet_master::pdk::version: ''
 puppet_master::tidy::dirlist:
     /opt/puppetlabs/server/data/puppetserver/reports:
         age: 1w
-        size: 50m
+        size: 1g
         recurse: true
         rmdirs: true
         type: mtime
